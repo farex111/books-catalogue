@@ -1,0 +1,39 @@
+<section>
+  <div class="bg-color">
+  <mat-card>
+        <mat-card-title>{{"SIGN-UP" | translate}}</mat-card-title>
+
+        <mat-card-content> 
+          <form [formGroup]="form" (ngSubmit)="register(form)" autocomplete="off">
+
+            <mat-form-field appearance="outline">
+              <mat-label>{{ "ENTER-EMAIL" | translate }}</mat-label>
+              <input type="email" matInput formControlName="email">
+              <mat-error *ngIf="email.touched && email.hasError('required')">{{"REQUIRED-EMAIL" | translate}}</mat-error>
+              <mat-error *ngIf="email.touched && email.hasError('email')">{{"VALID-EMAIL" | translate}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>{{ "ENTER-PASS" | translate }}</mat-label>
+              <input type="password" matInput formControlName="password">
+              <mat-error *ngIf="password.touched && password.hasError('required')">{{"REQUIRED-PASS" | translate}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>{{ "CONFIRM-PASS" | translate }}</mat-label>
+              <input type="password" matInput formControlName="passwordConfirm">
+            </mat-form-field>
+            
+            <mat-error *ngIf="passwordConfirm.touched && form.hasError('passwordsNotMatching')">{{"PASS-MATCH" | translate}}</mat-error>
+            <mat-hint *ngIf="form.invalid">{{"FILL" | translate}}</mat-hint>
+
+            <div class="button">
+              <button mat-button type="submit" [disabled]="!form.valid">{{"SIGN-UP" | translate}}</button>
+            </div>
+
+          </form>
+        </mat-card-content>
+
+      </mat-card>
+  </div>
+</section>

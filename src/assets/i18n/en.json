@@ -1,0 +1,23 @@
+{
+  "LOGO": "Books Catalogue",
+  "LANGUAGE": "language",
+  "ENGLISH": "English",
+  "GEORGIAN": "Georgian",
+  "SIGN-IN": "Sign In",
+  "SIGN-UP": "Sign Up",
+  "SIGN-OUT": "Sign Out",
+  "TITLE": "Online Library",
+  "QOUTE": "Dream Big. Think Different. Do More.",
+  "TOUR": "Take A Tour",
+  "ENTER-PASS": "Password",
+  "USER":"Username",
+  "REQUIRED-USER": "Username is required",
+  "ENTER-EMAIL": "E-Mail",
+  "CONFIRM-PASS": "Password Confirmation",
+  "VALID-EMAIL":"Please, enter valid email address.",
+  "REQUIRED-EMAIL": "Email is required.",
+  "VALID-PASS": "Please, enter valid password.",
+  "REQUIRED-PASS": "password is required.",
+  "PASS-MATCH": "Password must match.",
+  "FILL": "Please fill out all needed information"
+}

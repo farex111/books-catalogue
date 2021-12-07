@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <a class="navbar-brand" href="">{{ "LOGO" | translate }}</a>
+    <button mat-raised-button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+        <li>
+          <button mat-raised-button   *ngIf="!isLoggedIn" (click)="goToSignIn()">
+            {{ "SIGN-IN" | translate }}
+          </button>
+        </li>
+        <li>
+          <button  mat-raised-button  *ngIf="!isLoggedIn" (click)="goToSignUp()">
+            {{ "SIGN-UP" | translate }}
+          </button>
+        </li>
+        <li>
+          <button mat-raised-button   class="signout" *ngIf="isLoggedIn" (click)="signOut()">
+            {{ "SIGN-OUT" | translate }}
+          </button>
+        </li>
+        <li class="nav-item dropdown">
+          <div class="dropdown">
+            <button mat-raised-button   class="dropbtn">{{ "LANGUAGE" | translate }}</button>
+            <div class="dropdown-content">
+              <button mat-raised-button   (click)="toEn()">{{ "ENGLISH" | translate }}</button>
+              <button  mat-raised-button  (click)="toKa()">{{ "GEORGIAN" | translate }}</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
