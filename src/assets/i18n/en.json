@@ -10,14 +10,16 @@
   "QOUTE": "Dream Big. Think Different. Do More.",
   "TOUR": "Take A Tour",
   "ENTER-PASS": "Password",
-  "USER":"Username",
+  "USER": "Username",
   "REQUIRED-USER": "Username is required",
   "ENTER-EMAIL": "E-Mail",
   "CONFIRM-PASS": "Password Confirmation",
-  "VALID-EMAIL":"Please, enter valid email address.",
+  "VALID-EMAIL": "Please, enter valid email address.",
   "REQUIRED-EMAIL": "Email is required.",
   "VALID-PASS": "Please, enter valid password.",
   "REQUIRED-PASS": "password is required.",
   "PASS-MATCH": "Password must match.",
-  "FILL": "Please fill out all needed information"
+  "FILL": "Please fill out all needed information",
+  "FIND": "Enter Book's Name",
+  "FIND-BTN": "Find Books"
 }

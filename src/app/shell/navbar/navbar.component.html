@@ -2,7 +2,7 @@
   <div class="container">
     <a class="navbar-brand" href="">{{ "LOGO" | translate }}</a>
     <button mat-raised-button
-      class="navbar-toggler"
+      class="navbar-toggler btn"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent"
@@ -15,26 +15,26 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
         <li>
-          <button mat-raised-button   *ngIf="!isLoggedIn" (click)="goToSignIn()">
+          <button mat-raised-button class="btn"   *ngIf="!isLoggedIn" (click)="goToSignIn()">
             {{ "SIGN-IN" | translate }}
           </button>
         </li>
         <li>
-          <button  mat-raised-button  *ngIf="!isLoggedIn" (click)="goToSignUp()">
+          <button  mat-raised-button class="btn"  *ngIf="!isLoggedIn" (click)="goToSignUp()">
             {{ "SIGN-UP" | translate }}
           </button>
         </li>
         <li>
-          <button mat-raised-button   class="signout" *ngIf="isLoggedIn" (click)="signOut()">
+          <button mat-raised-button color="warn"   class="signout" *ngIf="isLoggedIn" (click)="signOut()">
             {{ "SIGN-OUT" | translate }}
           </button>
         </li>
         <li class="nav-item dropdown">
           <div class="dropdown">
-            <button mat-raised-button   class="dropbtn">{{ "LANGUAGE" | translate }}</button>
+            <button mat-raised-button    class="dropbtn btn">{{ "LANGUAGE" | translate }}</button>
             <div class="dropdown-content">
-              <button mat-raised-button   (click)="toEn()">{{ "ENGLISH" | translate }}</button>
-              <button  mat-raised-button  (click)="toKa()">{{ "GEORGIAN" | translate }}</button>
+              <button mat-raised-button class="btn"  (click)="toEn()">{{ "ENGLISH" | translate }}</button>
+              <button mat-raised-button class="btn"  (click)="toKa()">{{ "GEORGIAN" | translate }}</button>
             </div>
           </div>
         </li>

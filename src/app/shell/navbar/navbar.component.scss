@@ -11,27 +11,20 @@
   .navbar-nav {
     li {
       padding: 15px;
-      button {
+      .btn {
       border: none;
       border-top: 6px solid transparent;
       background-color: inherit;
       transition: all 0.4s;
       color: rgb(107, 107, 107);
-      font-size: 18px;
-      font-weight: bold;
       text-transform: capitalize !important;
     }
-    button:hover {
+    .btn:hover {
       border-top: 6px solid #69d2e7;
       color: black;
     }
     }
   }
-}
-.signout {
-  background-color: #b32525 !important;
-  color: white !important;
-  border: none !important;
 }
 .dropbtn {
   background-color: #69d2e7 !important;

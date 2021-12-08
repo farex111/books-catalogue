@@ -1,1 +1,9 @@
-content
+<section>
+  <div class="container py-5">
+    <h1 class="display-5 fw-bold">{{ "TITLE" | translate }}</h1>
+    <p class="col-md-6 ">
+      {{ "QOUTE" | translate }}
+    </p>
+    <a [routerLink]="['/content/add']" routerLinkActive="router-link-active" > {{"TOUR" | translate}} </a>
+  </div>
+</section>

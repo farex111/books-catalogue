@@ -5,28 +5,14 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { AuthRoutingModule } from './auth-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatIconModule } from '@angular/material/icon';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
-
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    MatCardModule,
     AuthRoutingModule,
     TranslateModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatGridListModule,
-    MatNativeDateModule,
-    ReactiveFormsModule,
-    FormsModule,
+    SharedModule,
   ],
   declarations: [SignInComponent, SignUpComponent],
 })
