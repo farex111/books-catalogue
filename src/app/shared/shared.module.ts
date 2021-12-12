@@ -10,6 +10,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatBadgeModule } from '@angular/material/badge';
 import { LoadingComponent } from './loading/loading.component';
+import { MatRadioModule } from '@angular/material/radio';
 import { Loding_spinnerComponent } from './loading/loading_spinner/loding_spinner.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -27,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatBadgeModule,
     FormsModule,
     ReactiveFormsModule,
+    MatRadioModule,
   ],
   exports: [
     TranslateModule,
@@ -41,6 +43,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatBadgeModule,
     FormsModule,
     ReactiveFormsModule,
+    MatRadioModule,
   ],
   declarations: [LoadingComponent, Loding_spinnerComponent],
 })

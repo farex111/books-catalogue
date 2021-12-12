@@ -4,6 +4,7 @@
 
 export const environment = {
   booksAPI: 'https://www.googleapis.com/books/v1/volumes',
+  movieAPI: 'https://www.omdbapi.com/?apikey=26d0b19a',
   firebase: {
     projectId: 'books-3cc30',
     appId: '1:744053503721:web:7b5057f9b6604f3926e278',

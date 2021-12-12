@@ -21,5 +21,9 @@
   "PASS-MATCH": "Password must match.",
   "FILL": "Please fill out all needed information",
   "FIND": "Enter Book's Name",
-  "FIND-BTN": "Find Books"
+  "FIND-BTN": "Find Books",
+  "REVIEW": "Review",
+  "SAVE": "Save",
+  "REVIEW-MUST": "Review is required",
+  "REVIEW-CHOOSE": "Pick Your Review"
 }

@@ -1,6 +1,16 @@
 .lastsearch {
-    margin: 5px ;
+  margin: 5px;
 }
 mat-error {
-    padding: 10px 0;
+  padding: 10px 0;
+}
+textarea {
+  resize: none !important;
+}
+.radio-group {
+  margin: 15px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
 }

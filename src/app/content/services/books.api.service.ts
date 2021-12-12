@@ -7,7 +7,6 @@ import { Book } from '../models/books.model';
 export class BooksApiService {
   constructor(private http: HttpClient) {}
   getBooks(title: string) {
-    return this.http
-      .get<{ items: Book[] }>(`${environment.booksAPI}?q=${title}`)
+    return this.http.get<Book>(`${environment.booksAPI}?q=${title}`);
   }
 }

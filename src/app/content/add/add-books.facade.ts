@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import { map, finalize } from 'rxjs/operators';
+import { map, finalize, switchMap } from 'rxjs/operators';
 import { LoadingService } from 'src/app/services/loading.service';
 import { BooksApiService } from '../services/books.api.service';
 import { AddStorage } from './add.storage';
 
 @Injectable()
 export class AddBooksFacade {
-
   get lastThreeSearches(): string[] {
     return this.addStorage.lastThreeSearches;
   }
