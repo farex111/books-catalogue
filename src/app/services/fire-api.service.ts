@@ -1,10 +1,6 @@
 import { Injectable } from '@angular/core';
 import { from, Observable } from 'rxjs';
-import {
-  body,
-  BookListItem,
-  BookWithId,
-} from '../content/models/content.model';
+import { body, BookWithId } from '../content/models/content.model';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AuthService } from './auth.service';
 import { map } from 'rxjs/operators';
