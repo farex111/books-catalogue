@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <mat-card class="example-card" *ngIf="item">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ item.book?.title }}</mat-card-title>
+          <mat-card-subtitle>{{ item.book?.authors }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="item.book?.imageLinks?.thumbnail" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>{{item.book?.description}}</p>
+        </mat-card-content>
+        <mat-card-actions class="d-flex align-items-center justify-content-between">
+          <button (click)="goToDetails()" color="primary" mat-raised-button>{{"DETAILS" | translate}}</button>
+          <button mat-stroked-button color="primary">Rating: {{ item.data?.rating }}/5</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

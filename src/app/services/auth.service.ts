@@ -17,6 +17,9 @@ export class AuthService {
   get isLoggedIn(): boolean {
     return !!this._user;
   }
+  get userID(){
+    return this._user?.uid
+  }
 
   constructor(private auth: AngularFireAuth) {
     this.auth.onAuthStateChanged((user) => {

@@ -19,7 +19,6 @@
     </div>
   </mat-card>
 </div>
-
 <div class="container mt-5">
     <div *ngIf="selectedbook$ | async as selectedbook">
       <div class="row">
@@ -37,18 +36,37 @@
             <mat-card-content>
               <p>{{selectedbook.description}}</p>
             </mat-card-content>
-            <form [formGroup]="form" (submit)="save()">
+            <form [formGroup]="form" (submit)="save(selectedbook)">
               <mat-form-field class="w-100" appearance="fill">
                 <mat-label>{{"REVIEW" | translate}}</mat-label>
                 <textarea  formControlName="review" id="review" maxlength="50" matInput></textarea>
                 <mat-error align="end" *ngIf="submitted && form.invalid">{{"REVIEW-MUST" | translate}}</mat-error>
                 <mat-hint align="end" >{{review.value.length}} / 50</mat-hint>
               </mat-form-field>
-              <div>
+              <div class="row align-items-center pt-3 pb-3">
+                <div class="col-md-6">
                 <label id="example-radio-group-label">{{"REVIEW-CHOOSE" | translate}}</label>
                 <mat-radio-group aria-labelledby="radio-group-label" class="radio-group" formControlName="rating">
                   <mat-radio-button color="primary" *ngFor="let reting of retings" [value]="reting">{{reting}}</mat-radio-button>
                 </mat-radio-group>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field appearance="fill" class="w-100">
+                  <mat-label for="status">{{"SELECT" | translate}}</mat-label>
+                  <mat-select formControlName="status" disableRipple>
+                    <mat-option [value]="status.read">{{"READ" | translate}}</mat-option>
+                    <mat-option [value]="status.readLater">{{"READ-LATER" | translate}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col-md-12" *ngIf="canReadLater">
+                <mat-form-field class="w-100" appearance="fill">
+                  <mat-label>Choose a date</mat-label>
+                  <input formControlName="whenRead" matInput [matDatepicker]="picker">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker touchUi #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
               </div>
             <button mat-raised-button color="primary" type="submit">{{"SAVE" | translate}}</button>
             </form>

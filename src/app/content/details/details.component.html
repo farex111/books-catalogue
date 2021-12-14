@@ -1,0 +1,46 @@
+<div class="container mt-5">
+  <button (click)="back()" mat-raised-button color="primary">
+    {{ "BACK" | translate }}
+  </button>
+
+  <mat-tab-group dynamicHeight>
+    <mat-tab label="{{'BOOK-DATA' | translate}}" color="primary">
+      <div class="row" *ngIf="BookData$ | async as BookData">
+        <div class="col-md-4">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>{{ BookData.title }}</mat-card-title>
+              <mat-card-subtitle>{{ BookData.subtitle }}</mat-card-subtitle>
+            </mat-card-header>
+            <img
+              mat-card-image
+              [src]="BookData.imageLinks.thumbnail"
+              alt="Photo of a book"
+            />
+          </mat-card>
+        </div>
+        <div class="col-md-8">
+          <mat-card class="example-card">
+            <mat-card-content>
+              <p>{{ BookData.description }}</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="{{'MY-DATA' | translate}}">
+      <div class="col">
+        <mat-card class="example-card">
+          <ng-container *ngIf="storeData$ | async as storeData">
+            <div>{{ storeData.review }}</div>
+            <button mat-stroked-button color="primary">
+              Rating: {{ storeData.rating }}/5
+            </button>
+            <div>{{ storeData.status }}</div>
+            <div>{{ storeData.whenRead }}</div>
+          </ng-container>
+        </mat-card>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

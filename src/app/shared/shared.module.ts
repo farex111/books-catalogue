@@ -11,6 +11,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatBadgeModule } from '@angular/material/badge';
 import { LoadingComponent } from './loading/loading.component';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatTabsModule } from '@angular/material/tabs';
 import { Loding_spinnerComponent } from './loading/loading_spinner/loding_spinner.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -29,6 +32,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     MatRadioModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatTabsModule,
   ],
   exports: [
     TranslateModule,
@@ -44,6 +50,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     MatRadioModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatTabsModule,
   ],
   declarations: [LoadingComponent, Loding_spinnerComponent],
 })

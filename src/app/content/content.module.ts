@@ -7,6 +7,9 @@ import { AddComponent } from './add/add.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BooksApiService } from './services/books.api.service';
+import { ListComponent } from './list/list.component';
+import { ListItemComponent } from './list/list-item/list-item.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   imports: [
@@ -17,7 +20,13 @@ import { BooksApiService } from './services/books.api.service';
     MatFormFieldModule,
   ],
   exports: [],
-  declarations: [ContentComponent, AddComponent],
+  declarations: [
+    ContentComponent,
+    AddComponent,
+    ListComponent,
+    ListItemComponent,
+    DetailsComponent,
+  ],
   providers: [BooksApiService],
 })
 export class ContentModule {}

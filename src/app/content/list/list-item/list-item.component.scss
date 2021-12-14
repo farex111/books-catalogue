@@ -1,0 +1,13 @@
+img {
+  height: 500px;
+  object-fit: cover;
+}
+mat-card-content {
+  height: 200px;
+  p {
+    height: 80%;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

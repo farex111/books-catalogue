@@ -25,5 +25,12 @@
   "REVIEW": "Review",
   "SAVE": "Save",
   "REVIEW-MUST": "Review is required",
-  "REVIEW-CHOOSE": "Pick Your Review"
+  "REVIEW-CHOOSE": "Pick Your Review",
+  "READ": "Read",
+  "READ-LATER": "Read Later",
+  "SELECT":"Select an option",
+  "DETAILS": "Details",
+  "BACK": "Go Back",
+  "BOOK-DATA":"Book Data",
+  "MY-DATA":"My Review"
 }
